@@ -68,8 +68,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid #e69c43;
-    color: #e69c43;
+    border: 2px solid #00358d;
+    color: #00358d;
     background: transparent;
     font-size: 24px;
     display: flex;
@@ -81,7 +81,7 @@
 }
 
 .gallery-btn:hover {
-    background: #e69c43;
+    background: #00358d;
     color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(230, 156, 67, 0.4);

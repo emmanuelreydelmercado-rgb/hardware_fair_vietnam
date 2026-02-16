@@ -103,7 +103,7 @@
   --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
   /* Font Size End */
   /* template main color */
-  --main-hex: #e69c43;
+  --main-hex: #00358d;
   --main-h: 37;
   --main-s: 74%;
   --main-l: 57%;
@@ -113,7 +113,7 @@
       rgba(57, 155, 98, 0.8) 0%,
       rgba(27, 248, 119, 0) 100%);
   /* template main two color */
-  --main-two-hex: #e69c43;
+  --main-two-hex: #00358d;
   --main-two-h: 37;
   --main-two-s: 74%;
   --main-two-l: 57%;
@@ -1800,7 +1800,7 @@ input:focus-visible {
 }
 
 .bg-main-two-600 {
-  background-color: var(--main-two-600) !important;
+  background-color: #00358d !important;
 }
 
 .bg-main-two-700 {
@@ -3496,7 +3496,7 @@ input:focus-visible {
 }
 
 .text-main-two-600 {
-  color: var(--main-two-600);
+  color: #ca2028;
 }
 
 .text-main-two-700 {
@@ -3759,6 +3759,10 @@ input:focus-visible {
   color: hsl(var(--white));
 }
 
+.text--blue {
+  color: #00358d !important;
+}
+
 .text--white-10 {
   color: hsl(var(--white) / 0.1);
 }
@@ -3796,7 +3800,7 @@ input:focus-visible {
 }
 
 .text-heading {
-  color: hsl(var(--heading-color));
+  color: white;
 }
 
 .text-body {
@@ -3843,7 +3847,7 @@ input:focus-visible {
 }
 
 .hover-text-main-600:hover {
-  color: #e69c43 !important;
+  color: #00358d !important;
 }
 
 .hover-text-main-700:hover {
@@ -4148,7 +4152,7 @@ input:focus-visible {
 }
 
 .hover-text-heading:hover {
-  color: hsl(var(--heading-color)) !important;
+  color: #00358d !important;
 }
 
 .hover-text-body:hover {
@@ -4189,7 +4193,7 @@ input:focus-visible {
 }
 
 .home-one-bg {
-  background-color: #1b2e23 !important;
+  background-color: #ffffff !important;
 }
 
 .home-two-bg {
@@ -11761,7 +11765,7 @@ input:focus-visible {
 
 .header-one .header-menu .nav-menu {
   border-radius: 8px;
-  background: rgba(56, 155, 98);
+  background: #ca2028;
   box-shadow: 0 5px 19.6px -3px rgba(255, 255, 255, 0.25) inset;
 }
 
@@ -11769,14 +11773,14 @@ input:focus-visible {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #399b62;
+  background: #ca2028;
   padding: 8px;
 }
 
 
 
 .header-button .tw-btn-circle-dot {
-  background-color: #399b62 !important;
+  background-color: #ca2028 !important;
 }
 
 @keyframes slideDown {
@@ -11791,7 +11795,7 @@ input:focus-visible {
 
 /* Header Menu and Submenu Css Start */
 .nav-menu__item.activePage>a {
-  color: var(--main-two-600) !important;
+  color: #00358d !important;
 }
 
 .nav-menu__item.activePage>a::before {
@@ -13248,9 +13252,9 @@ body.tw-magic-cursor #magic-cursor {
 }
 
 .banner-sub-title {
-  letter-spacing: 3.5px;
+  letter-spacing: 0.5px;
   color: #ffffff;
-  background-color: #399b62;
+  background-color: #ca2028;
   padding: 12px 24px;
   display: inline-block;
   border-radius: 8px 8px 8px 8px;
@@ -13260,7 +13264,7 @@ body.tw-magic-cursor #magic-cursor {
 .banner-title {
   text-transform: uppercase;
   font-size: 65px;
-  color: #ff991e;
+  color: #ca2028;
 }
 
 .banner-title div,
@@ -13275,12 +13279,364 @@ body.tw-magic-cursor #magic-cursor {
 }
 
 .banner-img-wrapper img {
-  width: 61% !important;
-  height: 61% !important;
+  width: 60% !important;
+  height: 60% !important;
   object-fit: contain !important;
   margin: 0 auto;
   display: block;
+  animation: hammerSwing 3s ease-in-out infinite;
 }
+
+@keyframes hammerSwing {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(30deg);
+    /* Wind up for force */
+  }
+
+  45% {
+    transform: rotate(-90deg);
+    /* SMASH! */
+  }
+
+  50% {
+    transform: rotate(-90deg);
+    /* Hold impact */
+  }
+
+  95% {
+    transform: rotate(0deg);
+    /* Smooth return */
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Spark Effect */
+.spark-img {
+  position: absolute;
+  top: -50px;
+  /* Moved up as requested */
+  /* Aligned with hammer head */
+  left: 830px;
+  /* 895px + nut width */
+  width: 300px;
+  height: 150px;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+  z-index: 5;
+  animation: sparkBurst 3s ease-in-out infinite;
+}
+
+@keyframes sparkBurst {
+
+  0%,
+  40% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  45% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* Text Slide-In Animation */
+.animate-with-nut {
+  opacity: 0;
+  transform: translateX(100px);
+  /* Start slightly right */
+  animation: slideInWithNut 1.5s ease-out forwards;
+  animation-delay: 4.5s;
+  /* Wait for 2nd hammer hit (1 cycle + 1.5s) */
+}
+
+.animate-with-nut:nth-child(2) {
+  animation-delay: 4.8s;
+  /* Stagger second item by 0.3s */
+}
+
+/* Floating Gears Animation */
+.floating-gear {
+  position: absolute;
+  object-fit: contain;
+  opacity: 0.6;
+  /* Subtle background effect */
+  z-index: 0;
+}
+
+.gear-1 {
+  width: 200px;
+  animation: moveDiagonal1 25s linear infinite, rotateGear 12s linear infinite;
+}
+
+.gear-2 {
+  width: 100px;
+  animation: moveDiagonal2 30s linear infinite, rotateGearReverse 15s linear infinite;
+}
+
+@keyframes moveDiagonal1 {
+  0% {
+    left: -300px;
+    top: -300px;
+  }
+
+  100% {
+    left: 110%;
+    top: 110%;
+  }
+}
+
+@keyframes moveDiagonal2 {
+  0% {
+    left: -200px;
+    top: 10%;
+  }
+
+  100% {
+    left: 110%;
+    top: 80%;
+  }
+}
+
+@keyframes rotateGear {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateGearReverse {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes slideInWithNut {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================================== Spanner and Nut Animation Start ================================== */
+.spanner-nut-animation-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 480px;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 10;
+  overflow: visible;
+}
+
+/* Nut (Screw) Styling and Animation - rolls to the right toward banner1 gear */
+.nut-wrapper {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.nut-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  animation: nutRollToGear 3s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes nutRollToGear {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  5% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  45% {
+    transform: translateX(895px) rotate(1440deg);
+  }
+
+  50% {
+    transform: translateX(895px) rotate(1440deg);
+  }
+
+  95% {
+    transform: translateX(0) rotate(2880deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(2880deg);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1299px) {
+  .spanner-nut-animation-wrapper {
+    top: 290px;
+  }
+
+  .nut-wrapper {
+    left: 40px;
+  }
+
+  .nut-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .spark-img {
+    left: 620px;
+    /* 600px + offset */
+    width: 100px;
+    height: 100px;
+    top: -25px;
+  }
+
+  @keyframes nutRollToGear {
+
+    0%,
+    5% {
+      transform: translateX(0) rotate(0deg);
+    }
+
+    45% {
+      transform: translateX(600px) rotate(1440deg);
+    }
+
+    50% {
+      transform: translateX(600px) rotate(1440deg);
+    }
+
+    95%,
+    100% {
+      transform: translateX(0) rotate(2880deg);
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .spanner-nut-animation-wrapper {
+    top: 250px;
+    height: 60px;
+  }
+
+  .nut-wrapper {
+    left: 30px;
+  }
+
+  .nut-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .spark-img {
+    left: 480px;
+    /* 460px + offset */
+    width: 80px;
+    height: 80px;
+    top: -20px;
+  }
+
+  @keyframes nutRollToGear {
+
+    0%,
+    5% {
+      transform: translateX(0) rotate(0deg);
+    }
+
+    45% {
+      transform: translateX(460px) rotate(1080deg);
+    }
+
+    50% {
+      transform: translateX(460px) rotate(1080deg);
+    }
+
+    95%,
+    100% {
+      transform: translateX(0) rotate(2160deg);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .spanner-nut-animation-wrapper {
+    top: 210px;
+  }
+
+  .spark-img {
+    left: 350px;
+    /* 330px + offset */
+    width: 25px;
+    height: 25px;
+  }
+
+  @keyframes nutRollToGear {
+
+    0%,
+    5% {
+      transform: translateX(0) rotate(0deg);
+    }
+
+    45% {
+      transform: translateX(330px) rotate(720deg);
+    }
+
+    50% {
+      transform: translateX(330px) rotate(720deg);
+    }
+
+    95%,
+    100% {
+      transform: translateX(0) rotate(1440deg);
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .spanner-nut-animation-wrapper {
+    display: none;
+  }
+}
+
+/* ================================== Spanner and Nut Animation End ================================== */
 
 @media screen and (max-width: 991px) {
   .banner-img-wrapper img {
@@ -13363,7 +13719,7 @@ body.tw-magic-cursor #magic-cursor {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: hsl(var(--white));
+  color: #ca2028;
   border-radius: 50%;
 }
 
@@ -13377,7 +13733,7 @@ body.tw-magic-cursor #magic-cursor {
   font-size: 30px;
   font-weight: 700;
   font-family: var(--heading-font);
-  color: hsl(var(--white));
+  color: #00358d;
   text-transform: uppercase;
 }
 
@@ -14524,7 +14880,7 @@ body.tw-magic-cursor #magic-cursor {
 }
 
 .about-area .section-wrapper .section-title {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1299px) {
@@ -19981,7 +20337,7 @@ body.tw-magic-cursor #magic-cursor {
   font-size: 18px;
   font-weight: 700;
   font-family: var(--body-font);
-  background: #e69c43 !important;
+  background: #00358d !important;
   border-radius: 30px !important;
   line-height: 1.5;
   padding: 24px 32px;
@@ -20006,7 +20362,7 @@ body.tw-magic-cursor #magic-cursor {
 
 .faq-accordion-button:not(.collapsed) {
   color: hsl(var(--white));
-  background: var(--main-600) !important;
+  background: #00358d !important;
   box-shadow: none !important;
   margin-block-start: -2px;
   border-radius: 30px 30px 0 0 !important;
@@ -20027,7 +20383,7 @@ body.tw-magic-cursor #magic-cursor {
 
 .faq-accordion-body {
   padding-inline: 32px 32px;
-  background-color: #399b62;
+  background-color: #ca2028;
 }
 
 @media screen and (max-width: 991px) {
@@ -25992,3 +26348,44 @@ body.tw-magic-cursor #magic-cursor {
 }
 
 /*# sourceMappingURL=main.css.map */
+/* Custom Logo Style */
+.nav-logo-custom {
+  max-height: 120px;
+  width: auto;
+  position: relative;
+  z-index: 1001;
+  object-fit: contain;
+  margin-left: -12px;
+}
+
+@media (max-width: 991px) {
+  .nav-logo-custom {
+    max-height: 70px;
+    margin-left: -20px;
+  }
+}
+
+.text-gradient-organizers {
+  background: linear-gradient(90deg, #ca2028, #00358d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+#gallery .section-title {
+  color: #00358d;
+}
+
+#about .section-title {
+  color: #ca2028;
+}
+
+#exhibitor .section-title {
+  color: #00358d;
+}
+
+#faq .section-title {
+  color: #35008d;
+}

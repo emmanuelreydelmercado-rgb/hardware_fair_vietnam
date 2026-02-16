@@ -20,8 +20,8 @@
     font-size: 1.2rem;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(135deg, #399b62 0%, #2d7a4d 50%, #399b62 100%);
-    border: 2px solid #e69c43;
+    background: linear-gradient(135deg, #ca2028 0%, #00358d 50%, #ca2028 100%);
+    border: 2px solid #00358d;
     border-radius: 8px;
     cursor: pointer;
     overflow: hidden;
@@ -55,7 +55,7 @@
     right: -100%;
     width: 60px;
     height: 60px;
-    background: radial-gradient(circle, rgba(57, 155, 98, 0.9) 0%, rgba(57, 155, 98, 0.4) 40%, transparent 70%);
+    background: radial-gradient(circle, #00358d(57, 155, 98, 0.9) 0%, #00358d(57, 155, 98, 0.4) 40%, transparent 70%);
     border-radius: 50%;
     transform: translate(50%, -50%);
     animation: glowMove2 3.5s ease-in-out infinite;
@@ -65,9 +65,9 @@
 /* Hover effect */
 .exhibit-button button:hover {
     transform: translateY(-5px) scale(1.05);
-    background: linear-gradient(135deg, #2d7a4d 0%, #399b62 50%, #2d7a4d 100%);
+    background: linear-gradient(135deg, #00358d 0%, #ca2028 50%, #ffffff 100%);
     border-color: #d88a35;
-    box-shadow: 0 12px 35px rgba(57, 155, 98, 0.5),
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5),
         0 0 50px rgba(230, 156, 67, 0.4),
         inset 0 0 20px rgba(230, 156, 67, 0.2);
 }
@@ -302,7 +302,7 @@
     position: absolute;
     width: 55px;
     height: 12px;
-    background: linear-gradient(90deg, #e69c43 0%, #d88a35 50%, #e69c43 100%);
+    background: #ca2028;
     border-radius: 0;
     box-shadow: 0 0 15px rgba(230, 156, 67, 0.6),
         0 0 25px rgba(230, 156, 67, 0.3);

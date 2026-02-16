@@ -54,10 +54,10 @@
 
 /* Hover effect - gradient background and scale */
 .brand-area .brand-wrapper:hover {
-    background: linear-gradient(135deg, #399b62 0%, #2d7a4d 100%);
+    background: linear-gradient(135deg, #ca2028 0%, #ffffff 100%);
     transform: scale(1.1);
     z-index: 9;
-    border: 2px solid #e69c43;
+    border: 2px solid #00358d;
     cursor: pointer;
 }
 
