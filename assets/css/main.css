@@ -103,10 +103,11 @@
   --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
   /* Font Size End */
   /* template main color */
+  /* template main color */
   --main-hex: #00358d;
-  --main-h: 37;
-  --main-s: 74%;
-  --main-l: 57%;
+  --main-h: 217;
+  --main-s: 100%;
+  --main-l: 28%;
   --main: var(--main-h) var(--main-s) var(--main-l);
   --main-gradient: linear-gradient(90deg, #ff10d2 0%, #4a0d72 100%);
   --main-gradient-two: linear-gradient(180deg,
@@ -2412,7 +2413,7 @@ input:focus-visible {
 }
 
 .bg-black {
-  background-color: hsl(var(--black)) !important;
+  background-color: #ffffff !important;
 }
 
 .bg-black-two {
